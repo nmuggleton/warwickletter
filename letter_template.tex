@@ -1,0 +1,62 @@
+\documentclass[a4paper]{letter} 
+
+\usepackage[ukdate]{warwickletter}
+\usepackage{lipsum}  % for dummy text
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength\headheight{80.0pt}
+\addtolength{\textheight}{-80.0pt}
+
+\lhead{\begin{picture}(0, 0) \put(-72.5, -9){
+\includegraphics[width=\paperwidth]{banner_2}}
+\end{picture}}  % If document is > 1 page, use streamlined banner for pages 2 - n.
+
+%------------------------------------------------------------------------------%
+%                Below this line is sender-specific information                %
+%------------------------------------------------------------------------------%
+
+\address{\footnotesize 
+Department of Psychology\\
+University of Warwick\\ 
+Gibbet Hill Road\\
+Coventry,$\;$ CV4$\;$7AL$\;$ 
+\\ United Kingdom\\[12pt]
+Tel:~~  $\,$ $\;$ $\;$+44(0) $\,$ 24 0000 0000 \\
+Mobile:~~+44(0) $\,$ 07 0000 0000 \\ 
+Fax:~~   $\;$ $\;$+44(0) $\,$ 24 0000 0000\\
+Email:~~~~~~ me@warwick.ac.uk
+} 
+% If adding an address line, then 38pt -> 26pt above
+
+% Add your name and signature
+\signature{\raggedleft \includegraphics[height=22pt]{dummy_signature} \\  % My electronic or handwritten signature goes here 
+		   My Name}
+
+\skipit{1.7}  % This amount (default = 1.7) increases 2
+
+%------------------------------------------------------------------------------%
+%                Below this line is letter-specific information                %
+%------------------------------------------------------------------------------%
+
+\begin{document}
+\begin{letter}{\small
+address line \\
+address line \\
+address line\\
+address line}
+
+%% if this is a ``short'' or long address, then alter \skipit above
+
+\opening{Dear Sir or Madam,}
+
+\setlength{\headsep}{100pt}
+
+\lipsum[1-6]  % Dummy text
+ 
+{\raggedleft\closing{\raggedleft Sincerely,}}
+
+\end{letter}
+\end{document} 
